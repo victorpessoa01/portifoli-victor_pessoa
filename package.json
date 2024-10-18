@@ -5,19 +5,24 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "start": "nuxt start",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@vueuse/core": "^11.1.0",
     "nuxt": "^3.13.2",
+    "vite": "4.0.0",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5",
-    "vuetify": "3.1.0",
+    "vuetify": "3.7.3",
     "vuex": "latest"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
+    "sass": "^1.80.2",
+    "sass-embedded": "^1.80.2",
     "typescript": "^4.9.5",
     "vite-plugin-inspect": "^0.8.7",
     "vite-plugin-md": "^0.21.5"

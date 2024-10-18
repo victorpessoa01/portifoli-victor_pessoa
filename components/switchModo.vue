@@ -1,17 +1,28 @@
 <script>
-import { useDark, useToggle } from '@vueuse/core'
+import { useDark } from '@vueuse/core';
 import { ref } from 'vue'
 
 const darkMode = useDark()
-const toggleDarkMode = useToggle(darkMode)
+
+function toggleDarkMode() {
+    darkMode.value = !darkMode.value
+    console.log('Darkmode Alterado');
+    
+} 
+
+watch(darkMode, (modeValue) => {
+    darkMode.value = modeValue
+    console.log('Darkmode Atual: ', modeValue.value);
+
+})
 
 </script>
 
 <template>
     <v-switch 
         v-model="darkMode"
+        class="swicth-modo"
         @change="toggleDarkMode"
-        label="Dark Mode"
     ></v-switch>    
 </template>
 
