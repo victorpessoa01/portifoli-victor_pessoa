@@ -1,6 +1,5 @@
 <template>
     <div>
-        <Navbar />
         <v-container>
             <h1>Bem Vindo ao Meu Portifólio</h1>
             <p>Sobre eu</p>
