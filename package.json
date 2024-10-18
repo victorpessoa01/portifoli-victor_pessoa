@@ -10,12 +10,16 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@mdi/font": "^7.4.47",
-    "nuxt": "^3.13.0",
-    "sass": "^1.80.2",
-    "sass-loader": "^16.0.2",
-    "vue": "latest",
-    "vue-router": "latest",
-    "vuetify": "^3.7.3"
+    "nuxt": "^3.13.2",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5",
+    "vuetify": "3.1.0",
+    "vuex": "latest"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "typescript": "^4.9.5",
+    "vite-plugin-inspect": "^0.8.7",
+    "vite-plugin-md": "^0.21.5"
   }
 }

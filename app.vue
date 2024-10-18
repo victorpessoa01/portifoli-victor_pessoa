@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <nuxt-page Home/>
+    <NuxtPage Home/>
   </v-app>
 </template>
 
