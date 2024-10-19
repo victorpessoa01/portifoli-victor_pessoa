@@ -1,13 +1,22 @@
 <script setup>
 import SwitchModo from './switchModo.vue';
 
-const title = "<Victor/Pessoa>"
+const victor = "Victor"
+const pessoa = "Pessoa"
 </script>
 <template>
     <v-app-bar>
-        <v-toolbar-title>
-            <router-link to="/" style="text-decoration: none; color: inherit;">
-            {{ title }}
+        <v-toolbar-title class="text-subtitle-1 font-weight-bold pa-0">
+            <router-link to="/" style="text-decoration: none; color: inherit;" class="pa-0 ma-0 text-green">
+            <
+                <span class="pa-0 ma-0 text-white">
+                    {{ victor }}
+                </span>
+                /
+                <span class="pa-0 ma-0 text-white">                
+                    {{ pessoa }}
+                </span>
+            >
             </router-link>
         </v-toolbar-title>
         <v-spacer />
