@@ -1,5 +1,8 @@
 export default defineNuxtConfig({
-    css: [
+  devServer: {
+    port: 3001
+  },
+  css: [
       'vuetify/styles',
     ],
   build: {

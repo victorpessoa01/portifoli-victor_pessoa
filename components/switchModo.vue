@@ -18,7 +18,7 @@ watch(darkMode, (modeValue) => {
 
 </script>
 
-<template>
+<template class="d-flex">
     <v-switch 
         v-model="darkMode"
         class="swicth-modo"

@@ -1,11 +1,12 @@
 <script setup>
+import { useDisplay } from 'vuetify';
 import SwitchModo from './switchModo.vue';
 
 const victor = "Victor"
 const pessoa = "Pessoa"
 </script>
 <template>
-    <v-app-bar>
+    <v-app-bar class="d-flex align-center">
         <v-toolbar-title class="text-subtitle-1 font-weight-bold pa-0">
             <router-link to="/" style="text-decoration: none; color: inherit;" class="pa-0 ma-0 text-green">
             <
