@@ -2,7 +2,7 @@
     <div>
         <v-container>
             <h1>Bem Vindo ao Meu Portifólio</h1>
-            <p>Sobre eu</p>
+            <p>Sobre mim</p>
         </v-container>
     </div>
 </template>

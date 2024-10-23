@@ -11,16 +11,20 @@ const vuetify = createVuetify({
     themes: {
       light: {
         colors: {
-          primary: '#00B894',
-          secondary: '#FFD700',
+          background: '#FFFFFF', // branco
+          primary: '#0E1017', // darkblue
+          secondary: '#FFB800', // amarelo
+          textColor: '#0E1017', // darkblue
           accent: '#0984E3',
         },
       },
       dark: {
         colors: {
-          primary: '#00B894',
-          secondary: '#FFD700',
-          accent: '#0984E3',
+          background: '#0E1017', // darkblue
+          primary: '#FFB800', // amarelo
+          secondary: '#076D6D', // verde
+          textColor: '#FFFFFF', // branco
+          accent: '#FFB800',
         },
       },
     }
