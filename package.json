@@ -11,6 +11,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/seo": "2.0.0-rc.23",
     "@vueuse/core": "^11.1.0",
     "nuxt": "^3.13.2",
     "vite": "4.0.0",
@@ -23,6 +24,7 @@
     "@vitejs/plugin-vue": "^5.1.4",
     "sass": "^1.80.2",
     "sass-embedded": "^1.80.2",
+    "sass-loader": "^16.0.2",
     "typescript": "^4.9.5",
     "vite-plugin-inspect": "^0.8.7",
     "vite-plugin-md": "^0.21.5"

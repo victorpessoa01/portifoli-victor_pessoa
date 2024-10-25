@@ -1,0 +1,60 @@
+// _container.scss
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  flex: 1; 
+  padding-top: 80px; 
+  background-color: #0eb47d;
+}
+
+// _navbar.scss
+nav {
+  position: fixed;          
+  z-index: 1000;         
+  padding: 10px 20px;     
+  height: 60px;  
+  align-items: center; 
+}
+
+// _footer.scss
+footer {
+  text-align: center;     
+  padding: 20px;         
+  position: relative;     
+}
+
+// _global.scss
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+html, body {
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  color: #0E1017; // Dark Blue
+}
+
+.text-body-1 {
+  color: #333; // Texto padrão
+}
+
+.v-card {
+  transition: transform 0.2s;
+}
+
+.v-card:hover {
+  transform: scale(1.05);
+}
+
