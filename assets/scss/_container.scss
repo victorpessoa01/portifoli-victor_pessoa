@@ -1,3 +1,28 @@
+// Tema Claro
+$light-primary: #0E1017; // darkblue
+$light-secondary: #FFB800; // amarelo
+$light-background: #FFFFFF; // branco
+$light-text-color: #0E1017; // darkblue
+$light-accent: #076D6D;
+
+// Tema Escuro
+$dark-primary: #FFB800; // amarelo
+$dark-secondary: #076D6D; // verde
+$dark-background: #0E1017; // darkblue
+$dark-text-color: #FFFFFF; // branco
+$dark-accent: #FFB800;
+
+// Mixins para aplicar o tema
+@mixin theme-light {
+  background-color: $light-background;
+  color: $light-text-color;
+}
+
+@mixin theme-dark {
+  background-color: $dark-background;
+  color: $dark-text-color;
+}
+
 // _container.scss
 .container {
   max-width: 1200px;
@@ -5,7 +30,16 @@
   padding: 20px;
   flex: 1; 
   padding-top: 80px; 
-  background-color: #0eb47d;
+  @include theme-dark();
+  &.light-mode {
+    @include theme-light();
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px; 
+  }
 }
 
 // _navbar.scss
@@ -29,7 +63,6 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
 }
 
 html, body {
@@ -42,19 +75,4 @@ html, body {
   min-height: 100vh;
 }
 
-h1, h2, h3 {
-  color: #0E1017; // Dark Blue
-}
-
-.text-body-1 {
-  color: #333; // Texto padrão
-}
-
-.v-card {
-  transition: transform 0.2s;
-}
-
-.v-card:hover {
-  transform: scale(1.05);
-}
 

@@ -2,7 +2,7 @@
 import { ref, computed } from 'vue'
 import menuItems from '~/layout/menu';
 import { useDisplay } from 'vuetify';
-import sidebar from './sidebar.vue';
+import Sidebar from './sidebar.vue';
 
 const { smAndDown } = useDisplay();
 const drawer = ref(false)
@@ -14,12 +14,11 @@ function toggleDrawer() {
     drawer.value = !drawer.value
     console.log(drawer.value)
 }
-
 </script>
 <template>
     <v-container>
         <v-app-bar color="background">
-            <v-row class="d-flex align-center ma-0 mx-10 justify-space-between">
+            <v-row class="d-flex align-center ma-0 mx-md-16 mx-4 justify-space-between">
                 <div class="ma-0 pa-0">
                     <v-toolbar-title class="text-subtitle-1 pa-0">
                         <router-link to="/" style="text-decoration: none; color: inherit;" class="pa-0 ma-0 text-secondary font-weight-bold">

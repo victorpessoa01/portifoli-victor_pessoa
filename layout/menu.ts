@@ -1,3 +1,4 @@
+import { mdiAccount, mdiCodeTags, mdiHome } from '@mdi/js'
 
 export interface MenuItem {
     title: string,

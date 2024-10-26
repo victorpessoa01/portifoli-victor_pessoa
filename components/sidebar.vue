@@ -16,7 +16,7 @@ function toggleDrawer() {
     <v-navigation-drawer v-model="drawer"
     location="right"
     color="background"
-    width="140"
+    :width="isMobile ? '160' : '200'"
     app temporary>
     <v-row justify="end" class="ma-0 pa-0 d-flex align-center">
         <v-list class="ma-0 pa-0">
