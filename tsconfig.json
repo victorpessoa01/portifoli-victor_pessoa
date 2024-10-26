@@ -1,6 +1,44 @@
+// {
+//   "extends": "./.nuxt/tsconfig.json",
+//     "compilerOptions": {
+//         "target": "es6",
+//         "module": "esnext",
+//         "strict": true,
+//         "jsx": "preserve",
+//         "moduleResolution": "node",
+//         "esModuleInterop": true,
+//         "skipLibCheck": true,
+//         "forceConsistentCasingInFileNames": true,
+//         "baseUrl": ".",
+//         "paths": {
+//             "@/*": ["src/*"]
+//         },
+//         "typeRoots": ["./node_modules/@types", "./types"] 
+//     },
+//     "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+//     "exclude": ["node_modules"]
+// }
 {
-  "extends": "./.nuxt/tsconfig.json",
-  "compilerOptions": {
-          "typeRoots": ["./node_modules/@types", "./types"]
+    "compilerOptions": {
+      "target": "esnext",
+      "module": "esnext",
+      "strict": true,
+      "jsx": "preserve",
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["./*"]
+      },
+      "types": ["@nuxt/types"] // Adicione esta linha
+    },
+    "include": [
+      "nuxt.config.ts",
+      "plugins/**/*.ts",
+      "components/**/*.vue",
+      "layouts/**/*.vue"
+    ]
   }
-}
+  

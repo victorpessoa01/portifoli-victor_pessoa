@@ -25,8 +25,8 @@ function toggleDrawer() {
                 @click="toggleDrawer()"
                 class="text-end"
                 >   
-                    <v-icon color="primary"> {{ i.icon }}</v-icon>                     
-                    <v-list-item-title>{{ i.title }}</v-list-item-title>
+                    <v-icon class="ma-0 pa-0">{{ i.icon }}</v-icon>                     
+                    <v-list-item-title class="text-primary ma-0 pa-0">{{ i.title }}</v-list-item-title>
                 </v-list-item>
             </v-list-group>
         </v-list>

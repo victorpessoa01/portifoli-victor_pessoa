@@ -12,7 +12,6 @@ const pessoa = "Pessoa"
 
 function toggleDrawer() {
     drawer.value = !drawer.value
-    console.log(drawer.value)
 }
 </script>
 <template>
@@ -56,7 +55,8 @@ function toggleDrawer() {
             </div>  
             <div v-else class="ma-0 pa-0">
                 <v-btn icon @click="toggleDrawer()">
-                    <v-icon color="primary">mdi-menu</v-icon>    
+                    <v-icon class="text-secondary">
+                        {{ drawer ? 'mdi-menu-open' : 'mdi-menu-close' }}</v-icon>      
                 </v-btn>
             </div>          
             </v-row>
