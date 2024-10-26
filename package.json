@@ -11,6 +11,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@mdi/js": "^7.4.47",
     "@nuxtjs/seo": "2.0.0-rc.23",
     "@vueuse/core": "^11.1.0",
     "nuxt": "^3.13.2",

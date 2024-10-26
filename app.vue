@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Navbar />
-    <!-- <Sidebar /> -->
+    <Sidebar />
       <NuxtPage />
     <Footer />
   </v-app>

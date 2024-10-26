@@ -1,61 +1,69 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import menuItems from '~/layout/menu';
 import { useDisplay } from 'vuetify';
+import sidebar from './sidebar.vue';
 
-const display = useDisplay() 
-
-const tolggleMenu = () => {
-    drawer.value = !drawer.value    
-}
+const { smAndDown } = useDisplay();
+const drawer = ref(false)
 
 const victor = "Victor"
 const pessoa = "Pessoa"
 
-const routes = ref([
-    { title: 'Home',link: '/' },
-    { title: 'Sobre Mim', link: '/about-me'},
-    { title: 'Habilidades',link: '/skills' },
-    { title: 'Projetos', link: '/project' }
-])
+function toggleDrawer() {
+    drawer.value = !drawer.value
+    console.log(drawer.value)
+}
+
 </script>
 <template>
     <v-container>
-        <v-app-bar color="background" class="d-flex align-center justify-space-center">
-            <v-toolbar-title class="text-subtitle-1 pa-0">
-                <router-link to="/" style="text-decoration: none; color: inherit;" class="pa-0 ma-0 text-secondary font-weight-bold">
-                    <span class="pa-0 ma-0 text-secondary"><</span>
-                    <span class="pa-0 ma-0 text-primary">
-                        {{ victor }}
-                    </span> 
-                    <span class="pa-0 ma-0 text-secondary ">/</span>
-                    <span class="pa-0 ma-0 text-primary">                
-                        {{ pessoa }}
-                    </span>
-                    <span class="pa-0 ma-0 text-secondary">>
-                    </span>
-                </router-link>
-            </v-toolbar-title>
-            <v-spacer />
-            <template v-if="mobile">
-                <v-btn icon @click="toggleMenu">
-                    <v-icon color="white">mdi-menu</v-icon>
+        <v-app-bar color="background">
+            <v-row class="d-flex align-center ma-0 mx-10 justify-space-between">
+                <div class="ma-0 pa-0">
+                    <v-toolbar-title class="text-subtitle-1 pa-0">
+                        <router-link to="/" style="text-decoration: none; color: inherit;" class="pa-0 ma-0 text-secondary font-weight-bold">
+                            <span class="pa-0 ma-0 text-secondary"><</span>
+                            <span class="pa-0 ma-0 text-primary">
+                                {{ victor }}
+                            </span> 
+                            <span class="pa-0 ma-0 text-secondary ">/</span>
+                            <span class="pa-0 ma-0 text-primary">                
+                                {{ pessoa }}
+                            </span>
+                            <span class="pa-0 ma-0 text-secondary">>
+                            </span>
+                        </router-link>
+                    </v-toolbar-title>
+                </div>
+                <div v-if="!smAndDown" class="ma-0 pa-0">
+                    <v-row class="d-flex align-center ma-0 pa-0">
+                        <div class="ma-0 pa-0">
+                            <v-btn 
+                                v-for="i in menuItems" 
+                                :key="i.title" 
+                                :to="i.to" 
+                                text
+                                class="mx-1"
+                            >
+                                {{ i.title }}
+                                
+                            </v-btn>
+                        </div>
+                        <div class="ma-0 pa-0">
+                            <!-- darkmode -->
+                        </div>
+                </v-row>
+            </div>  
+            <div v-else class="ma-0 pa-0">
+                <v-btn icon @click="toggleDrawer()">
+                    <v-icon color="primary">mdi-menu</v-icon>    
                 </v-btn>
-            </template>
-            <template v-else>
-                <v-app-bar>
-                    <v-btn 
-                        v-for="route in routes" 
-                        :key="route.title" 
-                        :to="route.link" 
-                        text
-                    >
-                        {{ route.title }}
-                    </v-btn>
-                </v-app-bar>
-            </template>
+            </div>          
+            </v-row>
         </v-app-bar>
+        <Sidebar v-model="drawer" v-if="drawer" />
     </v-container>
-    <sidebar :drawer="drawer" @update:drawer="val => (drawer = val)" />
 </template>
 <style lang="scss" scoped>
 @import './assets/scss/container.scss';
