@@ -1,12 +1,14 @@
 <template>
   <v-app>
     <Navbar />
-      <NuxtLayout />
+    <Sidebar />
+      <NuxtPage />
     <Footer />
   </v-app>
 </template>
 <script setup>
-import Navbar from './components/navbar.vue'
-import Footer from './components/footer.vue'
-import "vuetify/styles"; 
+
 </script>
+<style lang="scss" scoped>
+@import './assets/scss/container.scss';
+</style>

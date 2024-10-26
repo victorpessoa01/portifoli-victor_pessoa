@@ -1,16 +1,15 @@
 <script setup>
-definePageMeta({
-    layout: 'home'
-})
+import Home from './home.vue';
+import AboutMe from './about-me.vue';
+import Project from './project.vue'
+import Skills from './skills.vue';
+
 </script>
 <template>
-    <div>
-    <v-container>
-        <h1>Bem Vindo ao Meu Portifólio</h1>
-        <p>Desenvolvedor Back-End</p>
+    <v-container class="container">
+        <Home />
+        <AboutMe />
+        <Skills />
+        <Project />
     </v-container>
-    </div>
 </template>
-<style lang="scss" scoped>
-
-</style>
