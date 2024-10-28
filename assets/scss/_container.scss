@@ -12,6 +12,7 @@ $dark-background: #0E1017; // darkblue
 $dark-text-color: #FFFFFF; // branco
 $dark-accent: #FFB800;
 
+
 // Mixins para aplicar o tema
 @mixin theme-light {
   background-color: $light-background;
@@ -23,24 +24,31 @@ $dark-accent: #FFB800;
   color: $dark-text-color;
 }
 
-// _container.scss
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  flex: 1; 
-  padding-top: 80px; 
-  @include theme-dark();
-  &.light-mode {
-    @include theme-light();
-  }
-}
 
-@media (max-width: 600px) {
-  .container {
-    padding: 10px; 
-  }
-}
+// _container.scss
+// .container {
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 20px;
+//   flex: 1; 
+//   padding-top: 80px; 
+//   background-color: $dark-background;
+//   &.light-mode {
+//     background-color: $light-background;
+//   }
+
+//   @include theme-dark;
+//   &.light-mode {
+//     @include theme-light;
+//   }
+// }
+
+// @media (max-width: 600px) {
+//   .container {
+//     padding: 10px; 
+//   }
+// }
+
 
 // _navbar.scss
 nav {
@@ -49,30 +57,94 @@ nav {
   padding: 10px 20px;     
   height: 60px;  
   align-items: center; 
+  color: $dark-text-color;
+  background-color: $dark-background;
+  &.light-mode {
+    background-color: $light-background;
+    color: $light-text-color;
+  }
 }
+
+.navbar-link {
+  font-family: 'Roboto', sans-serif; 
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 6px;
+  position: relative;
+  color: inherit;
+  transition: color 0.3s ease;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    left: -4px;
+    right: -4px;
+    bottom: -5px;
+    height: 2px;
+    background-color: $dark-secondary;
+    &.light-mode {
+      background-color: $light-secondary;
+    }
+    transition: background-color 0.3s ease;
+  }
+  
+  &:hover::after, 
+  &.active::after {
+    background-color: $dark-primary;
+    &.light-mode {
+      background-color: $light-primary;
+    }
+  }
+}
+
+.sidebar-link {
+  font-family: 'Roboto', sans-serif; 
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 6px;
+  position: relative;
+  color: inherit;
+}
+
+
 
 // _footer.scss
 footer {
   text-align: center;     
   padding: 20px;         
-  position: relative;     
+  position: relative; 
+  color: $dark-text-color;
+  &.light-mode {
+    color: $light-text-color;
+  }    
 }
+
 
 // _global.scss
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;  
   margin: 0;
   padding: 0;
+  color: $dark-text-color;
+  background-color: $dark-background;
+  &.light-mode {
+    background-color: $light-background;
+    color: $light-text-color;
+  }
 }
+
+
 
 html, body {
   height: 100%;
 }
+
 
 #app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-
 

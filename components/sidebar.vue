@@ -7,30 +7,37 @@ const drawer = ref(false)
 const { smAndDown } = useDisplay();
 
 const isMobile = computed(() => smAndDown.value)
-
-function toggleDrawer() {
-    drawer.value = !drawer.value
-}
 </script>
 <template>
     <v-navigation-drawer v-model="drawer"
     location="right"
     color="background"
-    :width="isMobile ? '220' : '240'"
+    class="ma-0 pa-0"
+    :width="isMobile ? '220' : '0'"
     app temporary>
-    <v-row justify="start" class="ma-0 pa-0">
-        <v-list>
-            <v-list-group>
-                <v-list-item v-for="(i, index) in menuItems" :key="index" :to="i.to"
+    <v-col justify="start" class="ma-0 pa-0">
+        <v-list class="ma-0 pa-0">
+                <v-list-item v-for="(i, index) in menuItems" 
+                :key="index" 
+                :to="i.to"
                 @click="toggleDrawer()"
                 >  
-                <v-row class="d-flex ma-0 ml-n1 pa-0">
-                    <v-icon class="my-2 mx-1 pa-0">{{ i.icon }}</v-icon>                     
-                    <v-list-item-title class="text-textColor my-2 mx-1 pa-0">{{ i.title }}</v-list-item-title>
+                    <v-row class=" ma-0 mx-6 pa-0">
+                        <v-icon class="my-2 mx-1 pa-0">{{ i.icon }}</v-icon>                     
+                        <v-list-item-title class="sidebar-link text-textColor my-3 mx-1 pa-0">{{ i.title }}</v-list-item-title>
                     </v-row> 
                 </v-list-item>
-            </v-list-group>
         </v-list>
-    </v-row>
+        <div v-if="smAndDown" class="ma-0 pa-0 mx-6 mt-4">
+            <v-btn icon elevation="0">
+                <v-icon icon="mdi-theme-light-dark" class="text-secondary"></v-icon>
+            <!-- <SwitchMode /> -->
+            </v-btn>
+        </div> 
+    </v-col>
     </v-navigation-drawer>
 </template>
+<style scoped lang="scss">
+@import './assets/scss/container.scss';
+
+</style>

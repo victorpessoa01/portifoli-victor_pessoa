@@ -2,7 +2,7 @@
 
 </script>
 <template>
-    <v-container class="container">
+    <v-container>
     
     </v-container>
 </template>

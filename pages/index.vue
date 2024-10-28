@@ -6,7 +6,7 @@ import Skills from './skills.vue';
 
 </script>
 <template>
-    <v-container class="container">
+    <v-container>
         <Home />
         <AboutMe />
         <Skills />
