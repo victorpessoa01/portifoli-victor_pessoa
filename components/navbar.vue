@@ -56,7 +56,7 @@ function toggleDrawer() {
             <div v-else class="ma-0 pa-0">
                 <v-btn icon @click="toggleDrawer()">
                     <v-icon class="text-secondary">
-                        {{ drawer ? 'mdi-menu-open' : 'mdi-menu-close' }}</v-icon>      
+                        {{ drawer ? 'mdi-menu-open' : 'mdi-menu' }}</v-icon>      
                 </v-btn>
             </div>          
             </v-row>
