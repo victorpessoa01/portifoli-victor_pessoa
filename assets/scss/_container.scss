@@ -26,28 +26,13 @@ $dark-accent: #FFB800;
 
 
 // _container.scss
-// .container {
-//   max-width: 1200px;
-//   margin: 0 auto;
-//   padding: 20px;
-//   flex: 1; 
-//   padding-top: 80px; 
-//   background-color: $dark-background;
-//   &.light-mode {
-//     background-color: $light-background;
-//   }
-
-//   @include theme-dark;
-//   &.light-mode {
-//     @include theme-light;
-//   }
-// }
-
-// @media (max-width: 600px) {
-//   .container {
-//     padding: 10px; 
-//   }
-// }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  flex: 1; 
+  padding-top: 50px; 
+}
 
 
 // _navbar.scss
@@ -107,7 +92,6 @@ nav {
   position: relative;
   color: inherit;
 }
-
 
 
 // _footer.scss

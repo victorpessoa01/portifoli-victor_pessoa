@@ -2,10 +2,10 @@
 
 </script>
 <template>
-    <v-container>
-    
+    <v-container class="container">
+    a rota aaaa
     </v-container>
 </template>
 <style lang="scss" scoped>
-
+@import './assets/scss/container.scss';
 </style>

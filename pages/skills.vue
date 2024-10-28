@@ -2,7 +2,11 @@
 
 </script>
 <template>
-    <v-container>
-      
+    <v-container class="container">
+        testandooooo
+    
     </v-container>
 </template>
+<style lang="scss" scoped>
+@import './assets/scss/container.scss';
+</style>

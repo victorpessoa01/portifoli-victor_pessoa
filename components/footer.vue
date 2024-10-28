@@ -1,6 +1,8 @@
 <template>
      <v-container class="footer text-center">
-        <p>Created by Victor</p>
+        <p>Created by <a href="https://github.com/victorpessoa01" target="_blank">
+          Victor Pessoa
+        </a></p>
         <span>&copy; 2024 - Todos os direitos reservados.</span>
       </v-container>
 </template>
