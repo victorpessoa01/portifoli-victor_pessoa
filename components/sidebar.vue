@@ -16,8 +16,9 @@ const isMobile = computed(() => smAndDown.value)
     :width="isMobile ? '220' : '0'"
     app temporary>
     <v-col justify="start" class="ma-0 pa-0">
-        <v-list class="ma-0 pa-0">
-                <v-list-item v-for="(i, index) in menuItems" 
+        <v-list class="ma-0 pa-0 mt-4">
+                <v-list-item 
+                v-for="(i, index) in menuItems" 
                 :key="index" 
                 :to="i.to"
                 @click="toggleDrawer()"
@@ -28,9 +29,12 @@ const isMobile = computed(() => smAndDown.value)
                     </v-row> 
                 </v-list-item>
         </v-list>
-        <div v-if="smAndDown" class="ma-0 pa-0 mx-6 mt-4">
-            <v-btn icon elevation="0">
-                <v-icon icon="mdi-theme-light-dark" class="text-secondary"></v-icon>
+        <div v-if="smAndDown" class="ma-0 pa-0 mx-6 mt-4 text-end">
+            <v-btn 
+            icon 
+            elevation="0">
+                <v-icon 
+                icon="mdi-theme-light-dark" class="text-secondary"></v-icon>
             <!-- <SwitchMode /> -->
             </v-btn>
         </div> 

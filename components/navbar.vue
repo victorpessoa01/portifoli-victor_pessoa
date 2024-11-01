@@ -48,7 +48,8 @@ function toggleDrawer() {
                             </router-link>
                         </div>
                         <div class="ma-0 pa-0">
-                            <v-btn icon elevation="0">
+                            <v-btn 
+                            icon elevation="0">
                                 <v-icon icon="mdi-theme-light-dark" class="text-secondary"></v-icon>
                                 <!-- <SwitchMode /> -->
                             </v-btn>
