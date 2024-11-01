@@ -5,6 +5,7 @@ import 'vuetify/styles'
 import '@mdi/font/css/materialdesignicons.css'
 import { defineNuxtPlugin } from 'nuxt/app';
 
+
 const vuetify = createVuetify({
   components,
   directives,
@@ -20,6 +21,7 @@ const vuetify = createVuetify({
           primary: '#0E1017', // darkblue
           secondary: '#FFB800', // amarelo
           textColor: '#0E1017', // darkblue
+          secondaryColor: '#7D7C7C',
           accent: '#0984E3',
         },
       },
@@ -29,6 +31,7 @@ const vuetify = createVuetify({
           primary: '#FFB800', // amarelo
           secondary: '#076D6D', // verde
           textColor: '#FFFFFF', // branco
+          secondaryColor: '#7D7C7C',
           accent: '#FFB800',
         },
       },
