@@ -1,7 +1,13 @@
 <script setup>
 import { saveAs } from 'file-saver';
+import { ref } from 'vue';
 import link from '~/layout/link';
 
+const resume = ref("/curriculo.pdf")
+
+function downloadResume() {
+    saveAs(resume.value, "curriculo-José_Victor_Pessoa.pdf")
+}
 </script>
 <template>
     <v-container class="container">
@@ -33,23 +39,24 @@ import link from '~/layout/link';
             </v-row>
         </v-col>
         <v-col cols="12" class="ma-0 pa-0 mt-10 text-right">
-            <v-col class="ma-0 pa-0">
+            <v-row justify="end" class="ma-0 pa-0">
                 <span class="ma-0 pa-0 text-secondaryColor"
                 style="font-size: 1rem; font-weight: 600;">
                     Escreval ("<span class="ma-0 pa-0 text-primary"
                     style="font-size: 1.5rem;">Olá, mundo!!!</span>")
                 </span>
-            </v-col>
-            <v-col cols="12" class="ma-0 pa-0">
+            </v-row>
+            <v-row justify="end" class="ma-0 pa-0 mt-6">
                 <v-btn class="ma-0 pa-0 rounded-xl"
                 elevation="3"
+                @click="downloadResume"
                 color="secondary"
                 >
                    <span class="ma-2 mx-3 my-1 text-primary font-weight-bold">
                         Baixar CV
                     </span> 
                 </v-btn>
-            </v-col>
+            </v-row>
         </v-col>
     </v-container>
 </template>

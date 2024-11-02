@@ -15,7 +15,7 @@ function toggleDrawer() {
 }
 </script>
 <template>
-    <v-container>
+    <v-container >
         <v-app-bar color="background">
             <v-row class="d-flex align-center ma-0 pa-0 mx-md-16 mx-4 justify-space-between">
                 <div class="ma-0 pa-0">

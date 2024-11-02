@@ -28,10 +28,15 @@ $dark-accent: #FFB800;
 // _container.scss
 .container {
   max-width: 1200px;
-  margin: 0;
+  margin: 0 auto;
   padding: 20px;
-  flex: 1; 
-  padding-top: 50px; 
+  flex: 1;
+  padding-top: 50px;
+  position: relative;
+  background-color: $dark-background;
+  &.light-mode {
+    background-color: $light-background;
+  } 
 }
 
 
@@ -39,7 +44,7 @@ $dark-accent: #FFB800;
 nav {
   position: fixed;          
   z-index: 1000;         
-  padding: 10px 20px;     
+  padding: 10px 10px;     
   height: 60px;  
   align-items: center; 
   color: $dark-text-color;
