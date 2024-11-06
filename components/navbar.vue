@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import menuItems from '~/layout/menu';
 import { useDisplay } from 'vuetify';
-import Sidebar from './sidebar.vue';
+import Sidebar from '../components/sidebar.vue';
 
 const { smAndDown } = useDisplay();
 const drawer = ref(false)
@@ -47,13 +47,6 @@ function toggleDrawer() {
                                 {{ i.title }}
                             </router-link>
                         </div>
-                        <!-- <div class="ma-0 pa-0">
-                            <v-btn 
-                            icon elevation="0">
-                                <v-icon icon="mdi-theme-light-dark" class="text-secondary"></v-icon>
-                                <SwitchMode />
-                            </v-btn>
-                        </div> -->
                     </v-row>
                 </div>  
                 <div v-else class="text-end ma-0 pa-0">

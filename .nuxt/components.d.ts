@@ -4,6 +4,10 @@ type IslandComponent<T extends DefineComponent> = T & DefineComponent<{}, {refre
 interface _GlobalComponents {
       'Footer': typeof import("../components/footer.vue")['default']
     'Navbar': typeof import("../components/navbar.vue")['default']
+    'PagesAboutMe': typeof import("../components/pages/about-me.vue")['default']
+    'PagesHome': typeof import("../components/pages/home.vue")['default']
+    'PagesProject': typeof import("../components/pages/project.vue")['default']
+    'PagesSkills': typeof import("../components/pages/skills.vue")['default']
     'Sidebar': typeof import("../components/sidebar.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/.pnpm/nuxt@3.13.2_@parcel+watcher@2.4.1_@types+node@22.8.1_ioredis@5.4.1_magicast@0.3.5_rollup@4.24_ouildywjvh6pvsm3oim64rmrwe/node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/.pnpm/nuxt@3.13.2_@parcel+watcher@2.4.1_@types+node@22.8.1_ioredis@5.4.1_magicast@0.3.5_rollup@4.24_ouildywjvh6pvsm3oim64rmrwe/node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -30,6 +34,10 @@ interface _GlobalComponents {
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/.pnpm/nuxt@3.13.2_@parcel+watcher@2.4.1_@types+node@22.8.1_ioredis@5.4.1_magicast@0.3.5_rollup@4.24_ouildywjvh6pvsm3oim64rmrwe/node_modules/nuxt/dist/app/components/server-placeholder")['default']>
       'LazyFooter': typeof import("../components/footer.vue")['default']
     'LazyNavbar': typeof import("../components/navbar.vue")['default']
+    'LazyPagesAboutMe': typeof import("../components/pages/about-me.vue")['default']
+    'LazyPagesHome': typeof import("../components/pages/home.vue")['default']
+    'LazyPagesProject': typeof import("../components/pages/project.vue")['default']
+    'LazyPagesSkills': typeof import("../components/pages/skills.vue")['default']
     'LazySidebar': typeof import("../components/sidebar.vue")['default']
     'LazyNuxtWelcome': typeof import("../node_modules/.pnpm/nuxt@3.13.2_@parcel+watcher@2.4.1_@types+node@22.8.1_ioredis@5.4.1_magicast@0.3.5_rollup@4.24_ouildywjvh6pvsm3oim64rmrwe/node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'LazyNuxtLayout': typeof import("../node_modules/.pnpm/nuxt@3.13.2_@parcel+watcher@2.4.1_@types+node@22.8.1_ioredis@5.4.1_magicast@0.3.5_rollup@4.24_ouildywjvh6pvsm3oim64rmrwe/node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -62,6 +70,10 @@ declare module 'vue' {
 
 export const Footer: typeof import("../components/footer.vue")['default']
 export const Navbar: typeof import("../components/navbar.vue")['default']
+export const PagesAboutMe: typeof import("../components/pages/about-me.vue")['default']
+export const PagesHome: typeof import("../components/pages/home.vue")['default']
+export const PagesProject: typeof import("../components/pages/project.vue")['default']
+export const PagesSkills: typeof import("../components/pages/skills.vue")['default']
 export const Sidebar: typeof import("../components/sidebar.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/.pnpm/nuxt@3.13.2_@parcel+watcher@2.4.1_@types+node@22.8.1_ioredis@5.4.1_magicast@0.3.5_rollup@4.24_ouildywjvh6pvsm3oim64rmrwe/node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/.pnpm/nuxt@3.13.2_@parcel+watcher@2.4.1_@types+node@22.8.1_ioredis@5.4.1_magicast@0.3.5_rollup@4.24_ouildywjvh6pvsm3oim64rmrwe/node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -88,6 +100,10 @@ export const NuxtIsland: typeof import("../node_modules/.pnpm/nuxt@3.13.2_@parce
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/.pnpm/nuxt@3.13.2_@parcel+watcher@2.4.1_@types+node@22.8.1_ioredis@5.4.1_magicast@0.3.5_rollup@4.24_ouildywjvh6pvsm3oim64rmrwe/node_modules/nuxt/dist/app/components/server-placeholder")['default']>
 export const LazyFooter: typeof import("../components/footer.vue")['default']
 export const LazyNavbar: typeof import("../components/navbar.vue")['default']
+export const LazyPagesAboutMe: typeof import("../components/pages/about-me.vue")['default']
+export const LazyPagesHome: typeof import("../components/pages/home.vue")['default']
+export const LazyPagesProject: typeof import("../components/pages/project.vue")['default']
+export const LazyPagesSkills: typeof import("../components/pages/skills.vue")['default']
 export const LazySidebar: typeof import("../components/sidebar.vue")['default']
 export const LazyNuxtWelcome: typeof import("../node_modules/.pnpm/nuxt@3.13.2_@parcel+watcher@2.4.1_@types+node@22.8.1_ioredis@5.4.1_magicast@0.3.5_rollup@4.24_ouildywjvh6pvsm3oim64rmrwe/node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const LazyNuxtLayout: typeof import("../node_modules/.pnpm/nuxt@3.13.2_@parcel+watcher@2.4.1_@types+node@22.8.1_ioredis@5.4.1_magicast@0.3.5_rollup@4.24_ouildywjvh6pvsm3oim64rmrwe/node_modules/nuxt/dist/app/components/nuxt-layout")['default']
