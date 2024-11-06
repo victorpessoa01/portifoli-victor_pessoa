@@ -1,28 +1,9 @@
-// Tema Claro
-$light-primary: #0E1017; // darkblue
-$light-secondary: #FFB800; // amarelo
-$light-background: #FFFFFF; // branco
-$light-text-color: #0E1017; // darkblue
-$light-accent: #076D6D;
-
 // Tema Escuro
 $dark-primary: #FFB800; // amarelo
 $dark-secondary: #076D6D; // verde
 $dark-background: #0E1017; // darkblue
 $dark-text-color: #FFFFFF; // branco
 $dark-accent: #FFB800;
-
-
-// Mixins para aplicar o tema
-@mixin theme-light {
-  background-color: $light-background;
-  color: $light-text-color;
-}
-
-@mixin theme-dark {
-  background-color: $dark-background;
-  color: $dark-text-color;
-}
 
 
 // _container.scss
@@ -34,9 +15,6 @@ $dark-accent: #FFB800;
   padding-top: 50px;
   position: relative;
   background-color: $dark-background;
-  &.light-mode {
-    background-color: $light-background;
-  } 
 }
 
 
@@ -51,10 +29,6 @@ $dark-accent: #FFB800;
   align-items: center; 
   color: $dark-text-color;
   background-color: $dark-background;
-  &.light-mode {
-    background-color: $light-background;
-    color: $light-text-color;
-  }
 }
 
 .navbar-link {
@@ -75,18 +49,12 @@ $dark-accent: #FFB800;
     bottom: -5px;
     height: 2px;
     background-color: $dark-secondary;
-    &.light-mode {
-      background-color: $light-secondary;
-    }
     transition: background-color 0.3s ease;
   }
   
   &:hover::after, 
   &.active::after {
     background-color: $dark-primary;
-    &.light-mode {
-      background-color: $light-primary;
-    }
   }
 }
 
@@ -97,45 +65,12 @@ $dark-accent: #FFB800;
   text-decoration: none;
   padding: 0 6px;
   position: relative;
-  color: inherit;
 }
-
 
 // _footer.scss
 .footer {
   text-align: center;     
   padding: 20px;         
-  position: relative; 
-  color: $dark-text-color;
-  &.light-mode {
-    color: $light-text-color;
-  }    
-}
-
-
-// _global.scss
-body {
-  font-family: 'Roboto', sans-serif;  
-  margin: 0;
-  padding: 0;
-  color: $dark-text-color;
-  background-color: $dark-background;
-  &.light-mode {
-    background-color: $light-background;
-    color: $light-text-color;
-  }
-}
-
-
-
-html, body {
-  height: 100%;
-}
-
-
-#app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  position: relative;   
 }
 
