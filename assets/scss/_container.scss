@@ -28,18 +28,25 @@ $dark-accent: #FFB800;
 // _container.scss
 .container {
   max-width: 1200px;
-  margin: 0;
+  margin: 0 auto;
   padding: 20px;
-  flex: 1; 
-  padding-top: 50px; 
+  flex: 1;
+  padding-top: 50px;
+  position: relative;
+  background-color: $dark-background;
+  &.light-mode {
+    background-color: $light-background;
+  } 
 }
 
 
 // _navbar.scss
-nav {
-  position: fixed;          
-  z-index: 1000;         
-  padding: 10px 20px;     
+.navbar {
+  position: fixed; 
+  flex: 1;        
+  z-index: 1000; 
+  margin: 0 auto;   
+  padding: 10px 10px;     
   height: 60px;  
   align-items: center; 
   color: $dark-text-color;
@@ -95,7 +102,7 @@ nav {
 
 
 // _footer.scss
-footer {
+.footer {
   text-align: center;     
   padding: 20px;         
   position: relative; 

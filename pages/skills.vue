@@ -2,7 +2,7 @@
 
 </script>
 <template>
-    <v-container class="container">
+    <v-container id="skills" class="container">
         testandooooo
     
     </v-container>

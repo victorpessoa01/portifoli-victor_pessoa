@@ -1,5 +1,5 @@
 <template>
-     <v-container class="footer text-center">
+     <v-container class="footer">
         <p>Created by <a href="https://github.com/victorpessoa01" target="_blank">
           Victor Pessoa
         </a></p>
