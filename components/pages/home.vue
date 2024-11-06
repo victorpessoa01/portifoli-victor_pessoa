@@ -41,7 +41,7 @@ function downloadResume() {
         <br />
         <v-col cols="12" class="ma-0 pa-0 mt-10 text-right">
             <v-row justify="end" class="ma-0 pa-0">
-                <span class="ma-0 pa-0 text-secondaryColor"
+                <span class="ma-0 pa-0 text-textSecondary"
                 style="font-size: 1rem; font-weight: 600;">
                     Escreval ("<span class="ma-0 pa-0 text-primary"
                     style="font-size: 1.5rem;">Olá, Mundo!!!</span>")
