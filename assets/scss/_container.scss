@@ -41,9 +41,11 @@ $dark-accent: #FFB800;
 
 
 // _navbar.scss
-nav {
-  position: fixed;          
-  z-index: 1000;         
+.navbar {
+  position: fixed; 
+  flex: 1;        
+  z-index: 1000; 
+  margin: 0 auto;   
   padding: 10px 10px;     
   height: 60px;  
   align-items: center; 
@@ -100,7 +102,7 @@ nav {
 
 
 // _footer.scss
-footer {
+.footer {
   text-align: center;     
   padding: 20px;         
   position: relative; 

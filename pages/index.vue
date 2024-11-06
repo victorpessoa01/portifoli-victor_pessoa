@@ -5,7 +5,7 @@ import Project from './project.vue'
 import Skills from './skills.vue';
 </script>
 <template>
-    <v-container class="container">
+    <v-container class="container bg-background">
         <Home />
         <AboutMe />
         <Skills />
