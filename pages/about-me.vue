@@ -29,7 +29,7 @@ const { smAndDown } = useDisplay();
                         rounded="1"
                         size="200"
                     >
-                        <v-img src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg" cover></v-img>
+                        <v-img src="https://github.com/victorpessoa01.png" cover></v-img>
                     </v-avatar>
                     </div>
                 </v-col>
