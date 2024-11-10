@@ -1,21 +1,20 @@
 <script setup>
-import { onMounted, ref, watch } from 'vue';
 import { useDisplay } from 'vuetify';
+import timeline from '~/layout/timeline';
 
 const { smAndUp } = useDisplay();
 </script>
 <template>
     <v-container id="about-me" class="container mt-6">
+        <br />
         <v-col cols="12" class="ma-0 pa-0">
         <h2 class="text-primary">Sobre Mim</h2>
             <v-row justify="space-between" class="mt-3 d-flex align-center">
                 <v-col cols="12" sm="7" class="d-flex align-center text-center">
                 <div>
                     <p class="ma-0 pa-0 text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Sou um desenvolvedor front-end cursando Engenharia de Software na <span class="font-weight-bold"> <a>
+                            <a href="https://jala.university/" target="_blank" class="text-secondary text-decoration-none ">Jala University</a></a></span>. Atualmente, me dedico no desenvolvimento de projetos que unem estudos e propósito, como meu portfólio profissional e um site de livros católicos online. Estou em busca de novas oportunidades para expandir minhas habilidades e contribuir para projetos significativos.
                     </p>
                 </div>
                 </v-col>
@@ -34,43 +33,37 @@ const { smAndUp } = useDisplay();
             </v-row>
         </v-col>
         <br />
+        <br />
         <v-col cols="12" class="ma-0 pa-0 mt-15">
-            <v-timeline :direction=" smAndUp ?  'horizontal' : 'vertical'">
-                <v-timeline-item dot-color="secondary">
-                <template v-slot:opposite >
+            <v-timeline v-if="smAndUp" direction="horizontal">
+                <v-timeline-item v-for="i in timeline" 
+                :key="i.mes" 
+                dot-color="secondary"
+                class="ma-0 pa-0 text-start algign-center">
+                <template v-slot:opposite>
                     <h3 class="text-primary">
-                        2022
+                        {{ i.mes }}/{{ i.ano }}
                     </h3>
                 </template>
                 <div>
                     <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        {{ i.description }}
                     </p>
                 </div>
                 </v-timeline-item>
+            </v-timeline>
 
-                <v-timeline-item dot-color="primary">
-                <template v-slot:opposite>
-                    <h3 class="text-secondary">
-                        2023
-                    </h3>
-                </template>
-                <div>
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div>
-                </v-timeline-item>
-
-                <v-timeline-item dot-color="secondary">
-                <template v-slot:opposite>
+            <v-timeline v-else side="end">
+                <v-timeline-item 
+                    v-for="i in timeline" 
+                    :key="i.mes" dot-color="secondary"
+                    class="ma-0 pa-0 text-start algign-center">
                     <h3 class="text-primary">
-                        Dez/2023
+                        {{ i.mes }}/{{ i.ano }}
                     </h3>
-                </template>
                 <div>
                     <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        {{ i.description }}
                     </p>
                 </div>
                 </v-timeline-item>
