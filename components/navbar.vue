@@ -17,7 +17,7 @@ function toggleDrawer() {
 <template>
     <v-container>
         <v-app-bar color="background">
-            <v-row class="d-flex align-center ma-0 pa-0 mx-lg-16 mx-4 mx-md-10 justify-space-between">
+            <v-row class="navbar justify-space-between">
                 <div class="ma-0 pa-0">
                     <v-toolbar-title class="text-subtitle-1 pa-0">
                         <router-link to="/" style="text-decoration: none; color: inherit;" class="pa-0 ma-0 text-secondary font-weight-bold">
@@ -36,7 +36,7 @@ function toggleDrawer() {
                 </div>
                 <div v-if="!smAndDown" class="ma-0 pa-0">
                     <v-row class="d-flex align-center ma-0 pa-0">
-                        <div class="ma-0 pa-0 mr-8">
+                        <div class="ma-0 pa-0">
                             <router-link 
                                 v-for="i in menuItems" 
                                 :key="i.title" 

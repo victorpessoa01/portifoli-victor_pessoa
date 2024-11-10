@@ -20,15 +20,14 @@ $dark-accent: #FFB800;
 
 // _navbar.scss
 .navbar {
-  position: fixed; 
-  flex: 1;        
-  z-index: 1000; 
-  margin: 0 auto;   
-  padding: 10px 10px;     
-  height: 60px;  
-  align-items: center; 
-  color: $dark-text-color;
-  background-color: $dark-background;
+  max-width: 1200px;   
+  width: 100%;         
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  z-index: 1000;
+  margin: 0 auto;     
+  padding: 0 20px;    
 }
 
 .navbar-link {
