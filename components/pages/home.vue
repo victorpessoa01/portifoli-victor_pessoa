@@ -1,7 +1,9 @@
 <script setup>
-import { saveAs } from 'file-saver';
+import pkg from 'file-saver';
 import { ref } from 'vue';
 import { link } from '~/layout/link';
+
+const { saveAs } = pkg;
 
 const resume = ref("/curriculo.pdf")
 
