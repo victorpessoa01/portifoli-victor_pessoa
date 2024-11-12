@@ -18,7 +18,7 @@ const { smAndUp } = useDisplay();
                         </p>
                     </v-col>
                     <br />
-                    <v-col cols="12" sm="4" class="ma-0 pa-0 perfil d-flex justify-center text-center"
+                    <v-col cols="12" sm="4" class="ma-0 pa-0 perfil d-flex justify-center align-center text-center"
                     :class="!smAndUp ? 'mt-12' : 'mt-0'">
                             <v-avatar
                             class="border-lg"
