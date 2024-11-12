@@ -20,7 +20,7 @@ function toggleDrawer() {
             <v-row class="navbar justify-space-between">
                 <div class="ma-0 pa-0">
                     <v-toolbar-title class="btn text-subtitle-1 pa-0">
-                        <router-link to="/" style="text-decoration: none; color: inherit;" class="pa-0 ma-0 text-secondary font-weight-bold">
+                        <router-link to="/" style="text-decoration: none;" class="pa-0 ma-0 text-secondary font-weight-bold">
                             <span class="pa-0 ma-0 text-secondary"><</span>
                             <span class="pa-0 ma-0 text-primary">
                                 {{ victor }}

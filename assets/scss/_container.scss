@@ -79,16 +79,29 @@ $dark-accent: #FFB800;
   } 
 }
 
+// .lang {
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+//   transition: transform 0.3s ease;
+
+//   &:hover{
+//     transform: scale(1.2);
+//     color: inherit;
+//   } 
+// }
+
 .lang {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease;
 
-  &:hover{
+  &:hover {
     transform: scale(1.2);
-    color: inherit;
-  } 
+    color: inherit; 
+  }
 }
+
 
 
