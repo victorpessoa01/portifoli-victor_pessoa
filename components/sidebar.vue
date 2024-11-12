@@ -35,5 +35,5 @@ const isMobile = computed(() => smAndDown.value)
         </v-navigation-drawer>
 </template>
 <style scoped lang="scss">
-@import './assets/scss/container.scss';
+@use './assets/scss/container' as *;
 </style>

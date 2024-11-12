@@ -61,5 +61,5 @@ function toggleDrawer() {
     </v-container>
 </template>
 <style lang="scss" scoped>
-@import './assets/scss/container.scss';
+@use './assets/scss/container' as *;
 </style>

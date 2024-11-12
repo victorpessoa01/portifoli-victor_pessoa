@@ -5,8 +5,8 @@ import { lang } from '@/layout/link';
 <template>
     <v-container id="skills" class="container">
         <br />
-        <div class="ma-0 pa-0">
-            <h2 class="topics text-primary">Habilidades</h2>
+        <div data-aos="fade-right" data-aos-delay="1000" class="ma-0 pa-0">
+            <h3 class="text-primary">Habilidades</h3>
             <v-col cols="12" class="ma-0 pa-0">
                 <br />
                 <v-row class="ma-0 pa-0 d-flex justify-center" wrap="nowrap">
@@ -37,5 +37,5 @@ import { lang } from '@/layout/link';
     </v-container>
 </template>
 <style lang="scss" scoped>
-@import './assets/scss/container.scss';
+@use './assets/scss/container' as *;
 </style>

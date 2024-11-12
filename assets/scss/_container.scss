@@ -17,8 +17,17 @@ $dark-accent: #FFB800;
   background-color: $dark-background;
 }
 
+h1, h2, h3 {
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  font-weight: 1000;
+  font-style: normal;
+}
+
 // _navbar.scss
 .navbar {
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
   max-width: 1200px;   
   width: 100%;         
   display: flex;
@@ -30,7 +39,7 @@ $dark-accent: #FFB800;
 }
 
 .navbar-link {
-  font-family: 'Roboto', sans-serif; 
+  font-family: "Bebas Neue", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
@@ -56,7 +65,7 @@ $dark-accent: #FFB800;
 }
 
 .sidebar-link {
-  font-family: 'Roboto', sans-serif; 
+  font-family: "Bebas Neue", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
@@ -78,18 +87,6 @@ $dark-accent: #FFB800;
     transform: scale(1.2);
   } 
 }
-
-// .lang {
-//   display: inline-flex;
-//   align-items: center;
-//   justify-content: center;
-//   transition: transform 0.3s ease;
-
-//   &:hover{
-//     transform: scale(1.2);
-//     color: inherit;
-//   } 
-// }
 
 .lang {
   display: inline-flex;
