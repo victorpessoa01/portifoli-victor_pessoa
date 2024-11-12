@@ -17,7 +17,6 @@ $dark-accent: #FFB800;
   background-color: $dark-background;
 }
 
-
 // _navbar.scss
 .navbar {
   max-width: 1200px;   
@@ -27,7 +26,7 @@ $dark-accent: #FFB800;
   align-items: center;      
   z-index: 1000;
   margin: 0 auto;     
-  padding: 0 20px;    
+  padding: 0 40px;    
 }
 
 .navbar-link {
@@ -51,8 +50,7 @@ $dark-accent: #FFB800;
     transition: background-color 0.3s ease;
   }
   
-  &:hover::after, 
-  &.active::after {
+  &:hover::after{
     background-color: $dark-primary;
   }
 }
@@ -72,4 +70,25 @@ $dark-accent: #FFB800;
   padding: 20px;         
   position: relative;   
 }
+
+.perfil, .btn {
+  transition: transform 0.3s ease;
+
+  &:hover{
+    transform: scale(1.2);
+  } 
+}
+
+.lang {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+
+  &:hover{
+    transform: scale(1.2);
+    color: inherit;
+  } 
+}
+
 
