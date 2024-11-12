@@ -17,6 +17,9 @@ importers:
       '@nuxtjs/seo':
         specifier: 2.0.0-rc.23
         version: 2.0.0-rc.23(h3@1.13.0)(magicast@0.3.5)(rollup@4.24.2)(vite@4.0.0(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0))(vue@3.5.12(typescript@4.9.5))
+      '@vercel/analytics':
+        specifier: ^1.3.2
+        version: 1.3.2
       '@vueuse/core':
         specifier: ^11.1.0
         version: 11.1.0(vue@3.5.12(typescript@4.9.5))
@@ -1417,6 +1420,17 @@ packages:
   '@unocss/rule-utils@0.63.6':
     resolution: {integrity: sha512-moeDEq5d9mB8gSYeoqHMkXWWekaFFdhg7QCuwwCbxCc+NPMOgGkmfAoafz+y2tdvK7pEuT191RWOiHQ0MkA5oQ==}
     engines: {node: '>=14'}
+
+  '@vercel/analytics@1.3.2':
+    resolution: {integrity: sha512-n/Ws7skBbW+fUBMeg+jrT30+GP00jTHvCcL4fuVrShuML0uveEV/4vVUdvqEVnDgXIGfLm0GXW5EID2mCcRXhg==}
+    peerDependencies:
+      next: '>= 13'
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      next:
+        optional: true
+      react:
+        optional: true
 
   '@vercel/nft@0.26.5':
     resolution: {integrity: sha512-NHxohEqad6Ra/r4lGknO52uc/GrWILXAMs1BB4401GTqww0fw1bAqzpG1XHuDO+dprg4GvsD9ZLLSsdo78p9hQ==}
@@ -3553,6 +3567,9 @@ packages:
     resolution: {integrity: sha512-VqpjJZKadQB/PEbEwvFdO43Ax5dFBZ2UECszz8bQ7pi7wt//PWe1P6MN7eCnjsatYtBT6EuiClbjSWP2WrIoTw==}
     engines: {node: '>= 0.8.0'}
 
+  server-only@0.0.1:
+    resolution: {integrity: sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==}
+
   set-blocking@2.0.0:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
 
@@ -5613,6 +5630,10 @@ snapshots:
     dependencies:
       '@unocss/core': 0.63.6
       magic-string: 0.30.12
+
+  '@vercel/analytics@1.3.2':
+    dependencies:
+      server-only: 0.0.1
 
   '@vercel/nft@0.26.5':
     dependencies:
@@ -8248,6 +8269,8 @@ snapshots:
       send: 0.19.0
     transitivePeerDependencies:
       - supports-color
+
+  server-only@0.0.1: {}
 
   set-blocking@2.0.0: {}
 
