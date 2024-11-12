@@ -1,0 +1,2 @@
+import style_0 from './skills-styles-1.mjs-Mzhk1Rep.js';
+export default [style_0]
