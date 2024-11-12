@@ -14,6 +14,7 @@ import { lang } from '@/layout/link';
                         cols="auto"
                         v-for="i in lang" 
                         :key="i.name" 
+                        
                         class="lang text-center d-flex flex-column align-center ma-2 pa-2"
                     >
                         <v-icon

@@ -49,6 +49,12 @@ const lang: Lang[] = [
         star: 2 
     },
     { 
+        name: 'Vuetify', 
+        icon: 'mdi-vuetify', 
+        color: '#1867c0',
+        star: 2 
+    },
+    { 
         name: 'Typescript', 
         icon: 'mdi-language-typescript', 
         color: '#007acc',
