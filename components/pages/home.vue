@@ -1,7 +1,7 @@
 <script setup>
 import { saveAs } from 'file-saver';
 import { ref } from 'vue';
-import link from '~/layout/link';
+import { link } from '~/layout/link';
 
 const resume = ref("/curriculo.pdf")
 
@@ -10,7 +10,7 @@ function downloadResume() {
 }
 </script>
 <template>
-    <v-container class="container">
+    <v-container id="home" class="container">
         <v-col cols="12" class="ma-0 pa-0">
             <h1 class="ma-0 pa-0 mb-n2"
             style="font-size: 2rem; font-weight: 600;"
@@ -28,7 +28,7 @@ function downloadResume() {
                 <v-card v-for="i in link" 
                 :key="i.title" 
                 :href="i.link" target="_blank" 
-                class="ma-0 pa-0 mr-6"
+                class="btn ma-0 pa-0 mr-6"
                 color="primary">
                     <v-icon 
                     color="secondary" 
@@ -48,12 +48,12 @@ function downloadResume() {
                 </span>
             </v-row>
             <v-row justify="end" class="ma-0 pa-0 mt-6">
-                <v-btn class="ma-0 pa-0 rounded-xl"
+                <v-btn class="btn d-flex pa-0 ma-0 rounded-xl"
                 elevation="3"
                 @click="downloadResume"
                 color="secondary"
                 >
-                   <span class="ma-2 mx-3 my-1 text-primary font-weight-bold">
+                   <span class="ma-4 pa-0 text-primary font-weight-bold">
                         Baixar CV
                     </span> 
                 </v-btn>

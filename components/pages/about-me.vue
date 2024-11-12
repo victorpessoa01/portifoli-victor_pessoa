@@ -6,10 +6,11 @@ const { smAndUp } = useDisplay();
 </script>
 <template>
     <v-container id="about-me" class="container mt-6">
+        <div class="ma-0 pa-0">
         <br />
+        <h2 class="topics text-primary">Sobre Mim</h2>
         <v-col cols="12" class="ma-0 pa-0">
-        <h2 class="text-primary">Sobre Mim</h2>
-            <v-row justify="space-between" class="mt-3 d-flex align-center">
+            <v-row justify="space-between" class="d-flex align-center">
                 <v-col cols="12" sm="7" class="d-flex align-center text-center">
                 <div>
                     <p class="ma-0 pa-0 text-justify">
@@ -19,7 +20,7 @@ const { smAndUp } = useDisplay();
                 </div>
                 </v-col>
                 <v-col cols="12" sm="5">
-                    <div class="d-flex justify-center mt-4 mt-sm-0">
+                    <div class="perfil d-flex justify-center mt-4 mt-sm-0">
                         <v-avatar
                         class="border-lg"
                         color="secondary"
@@ -69,6 +70,7 @@ const { smAndUp } = useDisplay();
                 </v-timeline-item>
             </v-timeline>
         </v-col>
+        </div>
     </v-container>
 </template>
 <style lang="scss" scoped>
