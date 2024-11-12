@@ -1,3 +1,15 @@
+<script setup>
+import "aos/dist/aos.css";
+import AOS from "aos";
+
+onMounted(() => {
+  AOS.init({
+      duration: 600, 
+      // easing: 'ease-in-out', 
+      once: true, 
+    });
+});
+</script>
 <template>
   <v-app>
     <Navbar />
@@ -6,9 +18,6 @@
     <Footer />
   </v-app>
 </template>
-<script setup>
-
-</script>
 <style lang="scss" scoped>
-@import './assets/scss/container.scss';
+@use './assets/scss/container' as *;
 </style>

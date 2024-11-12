@@ -25,9 +25,9 @@ const isMobile = computed(() => smAndDown.value)
                     :to="i.to"
                     @click="toggleDrawer()"
                     >  
-                        <v-row justify="start" class="ma-0 mx-6 pa-0 d-flex align-center">
-                            <v-icon color="white" class="mx-1 pa-0">{{ i.icon }}</v-icon>                     
-                            <v-list-item-title class="sidebar-link text-textPrimary ma-0 mx-1 pa-0">{{ i.title }}</v-list-item-title>
+                        <v-row justify="start" class=" ma-0 mx-6 pa-0 d-flex align-center">
+                            <v-icon color="white" class="mx-1 pa-0">{{ i.icon }}</v-icon>            
+                            <v-list-item-title class="sidebar text-textPrimary ma-0 mx-1 pa-0">{{ i.title }}</v-list-item-title>
                         </v-row> 
                     </v-list-item>
             </v-list>
@@ -35,5 +35,5 @@ const isMobile = computed(() => smAndDown.value)
         </v-navigation-drawer>
 </template>
 <style scoped lang="scss">
-@import './assets/scss/container.scss';
+@use './assets/scss/container' as *;
 </style>
