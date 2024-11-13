@@ -4,10 +4,7 @@ import { computed } from 'vue';
 import { useDisplay } from 'vuetify';
 
 const { smAndUp } = useDisplay();
-
 const proj = computed(() => project)
-
-
 </script>
 <template>
     <v-container id="project" class="container">
