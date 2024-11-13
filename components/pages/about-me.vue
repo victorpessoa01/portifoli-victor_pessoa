@@ -34,7 +34,7 @@ const timeLine = computed(() => timeline)
             </v-col>
             <br />
             <v-col cols="12" class="ma-0 pa-0 mt-15">
-                <v-timeline v-if="smAndUp" direction="horizontal" >
+                <v-timeline v-if="smAndUp" :direction="smAndUp ? 'horizontal' : 'vertical'" >
                     <v-timeline-item v-for="i in timeLine" 
                     :key="i.mes" 
                     dot-color="secondary"
