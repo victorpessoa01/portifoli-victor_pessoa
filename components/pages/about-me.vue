@@ -3,6 +3,7 @@ import { useDisplay } from 'vuetify';
 import timeline from '~/layout/timeline';
 
 const { smAndUp } = useDisplay();
+const timeLine = computed(() => timeline)
 </script>
 <template>
     <v-container id="about-me" class="container">
@@ -18,7 +19,7 @@ const { smAndUp } = useDisplay();
                         </p>
                     </v-col>
                     <br />
-                    <v-col cols="12" sm="4" class="ma-0 pa-0 perfil d-flex justify-center align-center text-center"
+                    <v-col cols="12" sm="4" class="ma-0 pa-0 perfil d-flex flex-column justify-center align-center text-center"
                     :class="!smAndUp ? 'mt-12' : 'mt-0'">
                             <v-avatar
                             class="border-lg"
@@ -33,8 +34,8 @@ const { smAndUp } = useDisplay();
             </v-col>
             <br />
             <v-col cols="12" class="ma-0 pa-0 mt-15">
-                <v-timeline v-if="smAndUp" direction="horizontal">
-                    <v-timeline-item v-for="i in timeline" 
+                <v-timeline v-if="smAndUp" direction="horizontal" >
+                    <v-timeline-item v-for="i in timeLine" 
                     :key="i.mes" 
                     dot-color="secondary"
                     class="ma-0 pa-0 text-start algign-center">

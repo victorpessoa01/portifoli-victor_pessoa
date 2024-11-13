@@ -88,9 +88,7 @@ h1, h2, h3 {
   } 
 }
 
-.lang {
-  display: inline-flex;
-  align-items: center;
+.lang, .card {
   justify-content: center;
   transition: transform 0.3s ease;
 

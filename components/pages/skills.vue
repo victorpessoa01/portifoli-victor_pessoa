@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { lang } from '@/layout/link';
+import { computed } from 'vue';
+
+const language = computed(() => lang)
 
 </script>
 <template>
@@ -12,9 +15,8 @@ import { lang } from '@/layout/link';
                 <v-row class="ma-0 pa-0 d-flex justify-center" wrap="nowrap">
                     <v-col 
                         cols="auto"
-                        v-for="i in lang" 
-                        :key="i.name" 
-                        
+                        v-for="i in language" 
+                        :key="i.name"
                         class="lang text-center d-flex flex-column align-center ma-2 pa-2"
                     >
                         <v-icon

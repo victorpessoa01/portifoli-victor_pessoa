@@ -5,7 +5,7 @@ import { link } from '~/layout/link';
 
 const { saveAs } = pkg;
 
-const resume = ref("/curriculo.pdf")
+const resume = ref("/public/doc/curriculo.pdf")
 
 function downloadResume() {
     saveAs(resume.value, "curriculo-José_Victor_Pessoa.pdf")
