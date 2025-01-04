@@ -4,17 +4,14 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev frontend",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "server": "node server backend"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "@mdi/js": "^7.4.47",
     "@nuxtjs/seo": "2.0.0-rc.23",
-    "@vercel/analytics": "^1.3.2",
     "@vueuse/core": "^11.1.0",
     "aos": "^2.3.4",
     "file-saver": "^2.0.5",
