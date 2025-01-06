@@ -1,15 +1,6 @@
 <script setup>
-import pkg from 'file-saver';
-import { ref } from 'vue';
 import { link } from '~/layout/link';
 
-const { saveAs } = pkg;
-
-const resume = ref("/public/doc/curriculo.pdf")
-
-function downloadResume() {
-    saveAs(resume.value, "curriculo-José_Victor_Pessoa.pdf")
-}
 </script>
 <template>
     <v-container id="home" class="container">
@@ -53,7 +44,8 @@ function downloadResume() {
                 <v-row justify="end" class="ma-0 pa-0 mt-6">
                     <v-btn class="btn d-flex pa-0 ma-0 rounded-xl"
                     elevation="3"
-                    @click="downloadResume"
+                    target="_blank"
+                    href="https://drive.google.com/file/d/1iBtuJlCdmsrvOfMLmzt2b3ai0BMPTlZc/view?usp=drive_link"
                     color="secondary"
                     >
                     <span class="ma-4 pa-0 text-primary font-weight-bold">

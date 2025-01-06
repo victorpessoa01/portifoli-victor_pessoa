@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import { project } from '@/layout/link';
-import { computed } from 'vue';
 import { useDisplay } from 'vuetify';
 
 const { smAndUp } = useDisplay();
-const proj = computed(() => project)
 </script>
 <template>
     <v-container id="project" class="container">
@@ -20,7 +18,7 @@ const proj = computed(() => project)
 
                 <v-slide-group center-active show-arrows>
                     <v-slide-item 
-                    v-for="p in proj" 
+                    v-for="p in project" 
                     :key="p.title"
                     class="mx-3 pa-0"
                     >
@@ -39,8 +37,8 @@ const proj = computed(() => project)
                             max-width="300"
                             height="100"
                             width="240"
-                            >
-                            </v-img>
+                            />
+                            
 
                             <h4 class="text-primary text-center mx-2 mt-2">{{ p.title }}</h4>
 
@@ -48,7 +46,7 @@ const proj = computed(() => project)
 
                             <v-col class="d-flex align-center justify-center ma-0 pa-0">
 
-                                <v-btn color="secondary" :href="p.deploy" target="_blank" class="mx-1 pa-2">Ver Projeto</v-btn>
+                                <v-btn v-if="p.deploy" color="secondary" :href="p.deploy" target="_blank" class="mx-1 pa-2">Ver Projeto</v-btn>
 
                                 <v-btn
                                     :href="p.repo"

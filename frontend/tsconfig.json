@@ -18,6 +18,7 @@
       "nuxt.config.ts",
       "plugins/**/*.ts",
       "components/**/*.vue",
-      "layouts/**/*.vue",  ]
+      "layouts/**/*.vue",  
+    ]
   }
   
