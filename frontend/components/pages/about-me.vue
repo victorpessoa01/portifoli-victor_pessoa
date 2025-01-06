@@ -2,8 +2,8 @@
 import { useDisplay } from 'vuetify';
 import timeline from '~/layout/timeline';
 
-const { smAndUp } = useDisplay();
 const timeLine = computed(() => timeline)
+const { smAndUp } = useDisplay();
 </script>
 <template>
     <v-container id="about-me" class="container">
@@ -14,13 +14,16 @@ const timeLine = computed(() => timeline)
                 <v-row justify="space-between" class="d-flex mx-2 align-center">
                     <v-col cols="12" sm="8" class="d-flex text-center">
                         <p class="ma-0 pa-0 text-justify">
-                            Sou um desenvolvedor front-end cursando Engenharia de Software na <span class="font-weight-bold">
-                                <a href="https://jala.university/" target="_blank" class="text-secondary text-decoration-none ">Jala University</a></span>. Atualmente, me dedico no desenvolvimento de projetos que unem estudos e propósito, como meu portfólio profissional e um site de livros católicos online. Estou em busca de novas oportunidades para expandir minhas habilidades e contribuir para projetos significativos.
+                            Sou um desenvolvedor front-end e atualmente cursando Engenharia de Software na <span class="font-weight-bold">
+                                <a href="https://jala.university/" target="_blank" class="text-secondary text-decoration-none ">Jala University</a></span>. Meu foco está em unir aprendizado técnico e propósito. Em meus estudos com projetos simples, busco sempre me proporcionar experiências que impactem positivamente na minha evolução.
+
+                                <br />
+                                Estou em busca de oportunidades para expandir minhas habilidades e experiências, além de contribuir com soluções criativas e eficientes para novos desafios na área da tecnologia.
                         </p>
                     </v-col>
                     <br />
-                    <v-col cols="12" sm="4" class="ma-0 pa-0 perfil d-flex flex-column justify-center align-center text-center"
-                    :class="!smAndUp ? 'mt-12' : 'mt-0'">
+                    <v-col cols="12" sm="4" class="ma-0 pa-0 perfil d-flex flex-column justify-center align-center"
+                        :class="!smAndUp ? 'mt-8' : ''">
                             <v-avatar
                             class="border-lg"
                             color="secondary"

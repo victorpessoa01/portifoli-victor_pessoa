@@ -157,7 +157,7 @@ const errorHandler = (async function errorhandler(error, event) {
   for (const [header, value] of res.headers.entries()) {
     setResponseHeader(event, header, value);
   }
-  setResponseStatus(event, res.status && res.status !== 200 ? res.status : void 0, res.statusText);
+  setResponseStatus(event, res.status && res.status !== 200 ? res.status : undefined, res.statusText);
   return send(event, html);
 });
 
@@ -172,7 +172,7 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _uHugiX3m4i = (function(nitro) {
+const _lZ82C1XhG2 = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
@@ -193,11 +193,11 @@ const appTeleportAttrs = {"id":"teleports"};
 const appId = "nuxt-app";
 
 const devReducers = {
-  VNode: (data) => isVNode(data) ? { type: data.type, props: data.props } : void 0,
-  URL: (data) => data instanceof URL ? data.toString() : void 0
+  VNode: (data) => isVNode(data) ? { type: data.type, props: data.props } : undefined,
+  URL: (data) => data instanceof URL ? data.toString() : undefined
 };
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _I7UgPkoKRf = (nitroApp) => {
+const _fh5CB6Ht4E = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -267,15 +267,15 @@ function onConsoleLog(callback) {
 }
 
 const plugins = [
-  _uHugiX3m4i,
-_I7UgPkoKRf
+  _lZ82C1XhG2,
+_fh5CB6Ht4E
 ];
 
-const _lazy_EKtRw4 = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_I5rC6E = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/__nuxt_error', handler: _lazy_EKtRw4, lazy: true, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_EKtRw4, lazy: true, middleware: false, method: undefined }
+  { route: '/__nuxt_error', handler: _lazy_I5rC6E, lazy: true, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_I5rC6E, lazy: true, middleware: false, method: undefined }
 ];
 
 const serverAssets = [{"baseName":"server","dir":"/home/victor/Documentos/Jose.Pessoa/github-Projetos/Portifolio/portifolio-victor_pessoa/frontend/server/assets"}];
@@ -314,7 +314,7 @@ function defineCachedFunction(fn, opts = {}) {
   const group = opts.group || "nitro/functions";
   const name = opts.name || fn.name || "_";
   const integrity = opts.integrity || hash([fn, opts]);
-  const validate = opts.validate || ((entry) => entry.value !== void 0);
+  const validate = opts.validate || ((entry) => entry.value !== undefined);
   async function get(key, resolver, shouldInvalidateCache, event) {
     const cacheKey = [opts.base, group, name, key + ".json"].filter(Boolean).join(":").replace(/:\/$/, ":index");
     let entry = await useStorage().getItem(cacheKey).catch((error) => {
@@ -335,11 +335,11 @@ function defineCachedFunction(fn, opts = {}) {
     const _resolve = async () => {
       const isPending = pending[key];
       if (!isPending) {
-        if (entry.value !== void 0 && (opts.staleMaxAge || 0) >= 0 && opts.swr === false) {
-          entry.value = void 0;
-          entry.integrity = void 0;
-          entry.mtime = void 0;
-          entry.expires = void 0;
+        if (entry.value !== undefined && (opts.staleMaxAge || 0) >= 0 && opts.swr === false) {
+          entry.value = undefined;
+          entry.integrity = undefined;
+          entry.mtime = undefined;
+          entry.expires = undefined;
         }
         pending[key] = Promise.resolve(resolver());
       }
@@ -371,7 +371,7 @@ function defineCachedFunction(fn, opts = {}) {
       }
     };
     const _resolvePromise = expired ? _resolve() : Promise.resolve();
-    if (entry.value === void 0) {
+    if (entry.value === undefined) {
       await _resolvePromise;
     } else if (expired && event && event.waitUntil) {
       event.waitUntil(_resolvePromise);
@@ -396,7 +396,7 @@ function defineCachedFunction(fn, opts = {}) {
       key,
       () => fn(...args),
       shouldInvalidateCache,
-      args[0] && isEvent(args[0]) ? args[0] : void 0
+      args[0] && isEvent(args[0]) ? args[0] : undefined
     );
     let value = entry.value;
     if (opts.transform) {
@@ -441,7 +441,7 @@ function defineCachedEventHandler(handler, opts = defaultCacheOptions()) {
       if (entry.value.code >= 400) {
         return false;
       }
-      if (entry.value.body === void 0) {
+      if (entry.value.body === undefined) {
         return false;
       }
       if (entry.value.headers.etag === "undefined" || entry.value.headers["last-modified"] === "undefined") {
@@ -457,7 +457,7 @@ function defineCachedEventHandler(handler, opts = defaultCacheOptions()) {
       const variableHeaders = {};
       for (const header of variableHeaderNames) {
         const value = incomingEvent.node.req.headers[header];
-        if (value !== void 0) {
+        if (value !== undefined) {
           variableHeaders[header] = value;
         }
       }
@@ -508,7 +508,7 @@ function defineCachedEventHandler(handler, opts = defaultCacheOptions()) {
             _resSendBody = chunk;
           }
           if (typeof arg2 === "function") {
-            arg2(void 0);
+            arg2(undefined);
           }
           if (typeof arg3 === "function") {
             arg3();
@@ -523,7 +523,7 @@ function defineCachedEventHandler(handler, opts = defaultCacheOptions()) {
             }
             for (const header in headers2) {
               const value = headers2[header];
-              if (value !== void 0) {
+              if (value !== undefined) {
                 this.setHeader(
                   header,
                   value
@@ -607,7 +607,7 @@ function defineCachedEventHandler(handler, opts = defaultCacheOptions()) {
           splitCookiesString(value)
         );
       } else {
-        if (value !== void 0) {
+        if (value !== undefined) {
           event.node.res.setHeader(name, value);
         }
       }
@@ -659,7 +659,7 @@ function applyEnv(obj, opts, parentKey = "") {
       if (_isObject(envValue)) {
         obj[key] = { ...obj[key], ...envValue };
         applyEnv(obj[key], opts, subKey);
-      } else if (envValue === void 0) {
+      } else if (envValue === undefined) {
         applyEnv(obj[key], opts, subKey);
       } else {
         obj[key] = envValue ?? obj[key];
@@ -747,13 +747,13 @@ new Proxy(/* @__PURE__ */ Object.create(null), {
     if (prop in runtimeConfig) {
       return runtimeConfig[prop];
     }
-    return void 0;
+    return undefined;
   }
 });
 
 getContext("nitro-app", {
   asyncContext: false,
-  AsyncLocalStorage: void 0
+  AsyncLocalStorage: undefined
 });
 
 const config = useRuntimeConfig();
@@ -945,7 +945,7 @@ function defineRenderHandler(render) {
   const runtimeConfig = useRuntimeConfig();
   return eventHandler(async (event) => {
     const nitroApp = useNitroApp();
-    const ctx = { event, render, response: void 0 };
+    const ctx = { event, render, response: undefined };
     await nitroApp.hooks.callHook("render:before", ctx);
     if (!ctx.response) {
       if (event.path === `${runtimeConfig.app.baseURL}favicon.ico`) {
@@ -980,7 +980,7 @@ function defineRenderHandler(render) {
   });
 }
 
-const r=Object.create(null),i=e=>globalThis.process?.env||globalThis._importMeta_.env||globalThis.Deno?.env.toObject()||globalThis.__env__||(e?r:globalThis),s=new Proxy(r,{get(e,o){return i()[o]??r[o]},has(e,o){const E=i();return o in E||o in r},set(e,o,E){const b=i(!0);return b[o]=E,!0},deleteProperty(e,o){if(!o)return !1;const E=i(!0);return delete E[o],!0},ownKeys(){const e=i(!0);return Object.keys(e)}}),t=typeof process<"u"&&process.env&&"development"||"",B=[["APPVEYOR"],["AWS_AMPLIFY","AWS_APP_ID",{ci:!0}],["AZURE_PIPELINES","SYSTEM_TEAMFOUNDATIONCOLLECTIONURI"],["AZURE_STATIC","INPUT_AZURE_STATIC_WEB_APPS_API_TOKEN"],["APPCIRCLE","AC_APPCIRCLE"],["BAMBOO","bamboo_planKey"],["BITBUCKET","BITBUCKET_COMMIT"],["BITRISE","BITRISE_IO"],["BUDDY","BUDDY_WORKSPACE_ID"],["BUILDKITE"],["CIRCLE","CIRCLECI"],["CIRRUS","CIRRUS_CI"],["CLOUDFLARE_PAGES","CF_PAGES",{ci:!0}],["CODEBUILD","CODEBUILD_BUILD_ARN"],["CODEFRESH","CF_BUILD_ID"],["DRONE"],["DRONE","DRONE_BUILD_EVENT"],["DSARI"],["GITHUB_ACTIONS"],["GITLAB","GITLAB_CI"],["GITLAB","CI_MERGE_REQUEST_ID"],["GOCD","GO_PIPELINE_LABEL"],["LAYERCI"],["HUDSON","HUDSON_URL"],["JENKINS","JENKINS_URL"],["MAGNUM"],["NETLIFY"],["NETLIFY","NETLIFY_LOCAL",{ci:!1}],["NEVERCODE"],["RENDER"],["SAIL","SAILCI"],["SEMAPHORE"],["SCREWDRIVER"],["SHIPPABLE"],["SOLANO","TDDIUM"],["STRIDER"],["TEAMCITY","TEAMCITY_VERSION"],["TRAVIS"],["VERCEL","NOW_BUILDER"],["VERCEL","VERCEL",{ci:!1}],["VERCEL","VERCEL_ENV",{ci:!1}],["APPCENTER","APPCENTER_BUILD_ID"],["CODESANDBOX","CODESANDBOX_SSE",{ci:!1}],["STACKBLITZ"],["STORMKIT"],["CLEAVR"],["ZEABUR"],["CODESPHERE","CODESPHERE_APP_ID",{ci:!0}],["RAILWAY","RAILWAY_PROJECT_ID"],["RAILWAY","RAILWAY_SERVICE_ID"],["DENO-DEPLOY","DENO_DEPLOYMENT_ID"],["FIREBASE_APP_HOSTING","FIREBASE_APP_HOSTING",{ci:!0}]];function p(){if(globalThis.process?.env)for(const e of B){const o=e[1]||e[0];if(globalThis.process?.env[o])return {name:e[0].toLowerCase(),...e[2]}}return globalThis.process?.env?.SHELL==="/bin/jsh"&&globalThis.process?.versions?.webcontainer?{name:"stackblitz",ci:!1}:{name:"",ci:!1}}const l=p(),d=l.name;function n(e){return e?e!=="false":!1}const I=globalThis.process?.platform||"",T=n(s.CI)||l.ci!==!1,R=n(globalThis.process?.stdout&&globalThis.process?.stdout.isTTY);n(s.DEBUG);const A=t==="test"||n(s.TEST);n(s.MINIMAL)||T||A||!R;const _=/^win/i.test(I);!n(s.NO_COLOR)&&(n(s.FORCE_COLOR)||(R||_)&&s.TERM!=="dumb"||T);const C=(globalThis.process?.versions?.node||"").replace(/^v/,"")||null;Number(C?.split(".")[0])||null;const y=globalThis.process||Object.create(null),c={versions:{}};new Proxy(y,{get(e,o){if(o==="env")return s;if(o in e)return e[o];if(o in c)return c[o]}});const L=globalThis.process?.release?.name==="node",a=!!globalThis.Bun||!!globalThis.process?.versions?.bun,D=!!globalThis.Deno,O=!!globalThis.fastly,S=!!globalThis.Netlify,N=!!globalThis.EdgeRuntime,P=globalThis.navigator?.userAgent==="Cloudflare-Workers",F=[[S,"netlify"],[N,"edge-light"],[P,"workerd"],[O,"fastly"],[D,"deno"],[a,"bun"],[L,"node"]];function G(){const e=F.find(o=>o[0]);if(e)return {name:e[1]}}const u=G();u?.name||"";
+const r=Object.create(null),i=e=>globalThis.process?.env||globalThis._importMeta_.env||globalThis.Deno?.env.toObject()||globalThis.__env__||(e?r:globalThis),s=new Proxy(r,{get(e,o){return i()[o]??r[o]},has(e,o){const E=i();return o in E||o in r},set(e,o,E){const b=i(true);return b[o]=E,true},deleteProperty(e,o){if(!o)return false;const E=i(true);return delete E[o],true},ownKeys(){const e=i(true);return Object.keys(e)}}),t=typeof process<"u"&&process.env&&"development"||"",B=[["APPVEYOR"],["AWS_AMPLIFY","AWS_APP_ID",{ci:true}],["AZURE_PIPELINES","SYSTEM_TEAMFOUNDATIONCOLLECTIONURI"],["AZURE_STATIC","INPUT_AZURE_STATIC_WEB_APPS_API_TOKEN"],["APPCIRCLE","AC_APPCIRCLE"],["BAMBOO","bamboo_planKey"],["BITBUCKET","BITBUCKET_COMMIT"],["BITRISE","BITRISE_IO"],["BUDDY","BUDDY_WORKSPACE_ID"],["BUILDKITE"],["CIRCLE","CIRCLECI"],["CIRRUS","CIRRUS_CI"],["CLOUDFLARE_PAGES","CF_PAGES",{ci:true}],["CODEBUILD","CODEBUILD_BUILD_ARN"],["CODEFRESH","CF_BUILD_ID"],["DRONE"],["DRONE","DRONE_BUILD_EVENT"],["DSARI"],["GITHUB_ACTIONS"],["GITLAB","GITLAB_CI"],["GITLAB","CI_MERGE_REQUEST_ID"],["GOCD","GO_PIPELINE_LABEL"],["LAYERCI"],["HUDSON","HUDSON_URL"],["JENKINS","JENKINS_URL"],["MAGNUM"],["NETLIFY"],["NETLIFY","NETLIFY_LOCAL",{ci:false}],["NEVERCODE"],["RENDER"],["SAIL","SAILCI"],["SEMAPHORE"],["SCREWDRIVER"],["SHIPPABLE"],["SOLANO","TDDIUM"],["STRIDER"],["TEAMCITY","TEAMCITY_VERSION"],["TRAVIS"],["VERCEL","NOW_BUILDER"],["VERCEL","VERCEL",{ci:false}],["VERCEL","VERCEL_ENV",{ci:false}],["APPCENTER","APPCENTER_BUILD_ID"],["CODESANDBOX","CODESANDBOX_SSE",{ci:false}],["STACKBLITZ"],["STORMKIT"],["CLEAVR"],["ZEABUR"],["CODESPHERE","CODESPHERE_APP_ID",{ci:true}],["RAILWAY","RAILWAY_PROJECT_ID"],["RAILWAY","RAILWAY_SERVICE_ID"],["DENO-DEPLOY","DENO_DEPLOYMENT_ID"],["FIREBASE_APP_HOSTING","FIREBASE_APP_HOSTING",{ci:true}]];function p(){if(globalThis.process?.env)for(const e of B){const o=e[1]||e[0];if(globalThis.process?.env[o])return {name:e[0].toLowerCase(),...e[2]}}return globalThis.process?.env?.SHELL==="/bin/jsh"&&globalThis.process?.versions?.webcontainer?{name:"stackblitz",ci:false}:{name:"",ci:false}}const l=p(),d=l.name;function n(e){return e?e!=="false":false}const I=globalThis.process?.platform||"",T=n(s.CI)||l.ci!==false,R=n(globalThis.process?.stdout&&globalThis.process?.stdout.isTTY);n(s.DEBUG);const A=t==="test"||n(s.TEST);n(s.MINIMAL)||T||A||!R;const _=/^win/i.test(I);!n(s.NO_COLOR)&&(n(s.FORCE_COLOR)||(R||_)&&s.TERM!=="dumb"||T);const C=(globalThis.process?.versions?.node||"").replace(/^v/,"")||null;Number(C?.split(".")[0])||null;const y=globalThis.process||Object.create(null),c={versions:{}};new Proxy(y,{get(e,o){if(o==="env")return s;if(o in e)return e[o];if(o in c)return c[o]}});const L=globalThis.process?.release?.name==="node",a=!!globalThis.Bun||!!globalThis.process?.versions?.bun,D=!!globalThis.Deno,O=!!globalThis.fastly,S=!!globalThis.Netlify,N=!!globalThis.EdgeRuntime,P=globalThis.navigator?.userAgent==="Cloudflare-Workers",F=[[S,"netlify"],[N,"edge-light"],[P,"workerd"],[O,"fastly"],[D,"deno"],[a,"bun"],[L,"node"]];function G(){const e=F.find(o=>o[0]);if(e)return {name:e[1]}}const u=G();u?.name||"";
 
 const scheduledTasks = false;
 
@@ -1227,7 +1227,7 @@ const ISLAND_SUFFIX_RE = /\.json(\?.*)?$/;
 async function getIslandContext(event) {
   let url = event.path || "";
   const componentParts = url.substring("/__nuxt_island".length + 1).replace(ISLAND_SUFFIX_RE, "").split("_");
-  const hashId = componentParts.length > 1 ? componentParts.pop() : void 0;
+  const hashId = componentParts.length > 1 ? componentParts.pop() : undefined;
   const componentName = componentParts.join("_");
   const context = event.method === "GET" ? getQuery$1(event) : await readBody(event);
   const ctx = {
@@ -1261,7 +1261,7 @@ const renderer = defineRenderHandler(async (event) => {
     });
   }
   const isRenderingIsland = event.path.startsWith("/__nuxt_island");
-  const islandContext = isRenderingIsland ? await getIslandContext(event) : void 0;
+  const islandContext = isRenderingIsland ? await getIslandContext(event) : undefined;
   let url = ssrError?.url || islandContext?.url || event.path;
   const isRenderingPayload = PAYLOAD_URL_RE.test(url) && !isRenderingIsland;
   if (isRenderingPayload) {
@@ -1284,7 +1284,7 @@ const renderer = defineRenderHandler(async (event) => {
     noSSR: event.context.nuxt?.noSSR || routeOptions.ssr === false && !isRenderingIsland || (false),
     head,
     error: !!ssrError,
-    nuxt: void 0,
+    nuxt: undefined,
     /* NuxtApp */
     payload: ssrError ? { error: ssrError } : {},
     _payloadReducers: /* @__PURE__ */ Object.create(null),
@@ -1512,7 +1512,7 @@ const SSR_CLIENT_TELEPORT_MARKER = /^uid=([^;]*);client=(.*)$/;
 const SSR_CLIENT_SLOT_MARKER = /^island-slot=[^;]*;(.*)$/;
 function getSlotIslandResponse(ssrContext) {
   if (!ssrContext.islandContext || !Object.keys(ssrContext.islandContext.slots).length) {
-    return void 0;
+    return undefined;
   }
   const response = {};
   for (const [name, slot] of Object.entries(ssrContext.islandContext.slots)) {
@@ -1525,7 +1525,7 @@ function getSlotIslandResponse(ssrContext) {
 }
 function getClientIslandResponse(ssrContext) {
   if (!ssrContext.islandContext || !Object.keys(ssrContext.islandContext.components).length) {
-    return void 0;
+    return undefined;
   }
   const response = {};
   for (const [clientUid, component] of Object.entries(ssrContext.islandContext.components)) {
